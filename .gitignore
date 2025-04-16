@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Node.js related
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Temp files
+*.log
+*.tmp
+
+# Other
+.env
+.vscode/
+.idea/
+
+# Original template files - no need to include in GitHub
+Template/
+*.zip
+*.rar 
