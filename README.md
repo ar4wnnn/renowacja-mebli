@@ -13,7 +13,7 @@ This is a website for a kitchen cabinet renovation and refurbishing company, usi
 
 ## Preview
 
-You can view the live preview of this website here: [GitHub Pages Link - Will be updated]
+You can view the live preview of this website here: [Renowacja Mebli Kuchennych](https://ar4wnnn.github.io/Renowacja-Mebli-Kuchennych/)
 
 ## Technologies Used
 
