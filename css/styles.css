@@ -1,15 +1,15 @@
 /* 
 * Renowacja Mebli Kuchennych - Main Stylesheet
-* Colors: Olive sage palette
+* Colors: Sage green palette
 */
 
 /* Global styles and variables */
 :root {
-    --primary-color: #A3A678; /* Main olive green */
-    --secondary-color: #D5D7B9; /* Light sage */
-    --accent-color: #878A5B; /* Darker olive */
-    --light-color: #E8EAD7; /* Very light sage */
-    --dark-color: #6A6C47; /* Very dark olive */
+    --primary-color: #7D8C65; /* Main sage green */
+    --secondary-color: #B8C4A2; /* Light sage */
+    --accent-color: #5A6B47; /* Darker sage */
+    --light-color: #DFE6D0; /* Very light sage */
+    --dark-color: #3A4A2C; /* Very dark sage */
     --text-color: #333333;
     --light-text-color: #ffffff;
     --header-font: 'Montserrat', sans-serif;
@@ -28,13 +28,29 @@ body {
     font-family: var(--body-font);
     color: var(--text-color);
     line-height: 1.6;
-    background-color: #F7F8F0; /* Very light sage background */
+    background-color: #F2F5EA; /* Very light sage background */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--header-font);
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: var(--dark-color);
+}
+
+h2 {
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
 }
 
 a {
@@ -76,11 +92,14 @@ section {
     letter-spacing: 1px;
     transition: var(--transition);
     text-transform: uppercase;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background-color: var(--accent-color);
     color: var(--light-text-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
 }
 
 .btn-blink {
@@ -89,6 +108,7 @@ section {
     margin-top: 2rem;
     margin-bottom: 1rem;
     display: inline-block;
+    background-color: var(--accent-color);
 }
 
 .btn-blink:hover {
@@ -104,11 +124,12 @@ section {
 /* Header styles */
 header {
     background-color: var(--light-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .top-bar {
-    background-color: var(--accent-color);
+    background-color: var(--dark-color);
     color: var(--light-text-color);
     padding: 10px 0;
     font-size: 0.9rem;
@@ -131,6 +152,8 @@ header {
 .logo h1 {
     font-size: 1.8rem;
     margin-bottom: 0;
+    color: var(--dark-color);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 nav ul {
@@ -147,10 +170,13 @@ nav ul li a {
     color: var(--accent-color);
     font-weight: 600;
     font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 nav ul li a:hover {
-    color: var(--primary-color);
+    color: var(--light-text-color);
+    background-color: var(--primary-color);
 }
 
 /* Hero section */
@@ -159,7 +185,7 @@ nav ul li a:hover {
     color: var(--light-text-color);
     text-align: center;
     padding: 100px 0;
-    background-image: linear-gradient(rgba(163, 166, 120, 0.8), rgba(163, 166, 120, 0.8)), url('../img/kuchnia.png');
+    background-image: linear-gradient(rgba(125, 140, 101, 0.85), rgba(90, 107, 71, 0.85)), url('../img/kuchnia.png');
     background-size: cover;
     background-position: center;
 }
@@ -185,18 +211,27 @@ nav ul li a:hover {
 }
 
 .hero .btn {
-    background-color: var(--secondary-color);
-    color: var(--accent-color);
+    background-color: var(--dark-color);
+    color: var(--light-text-color);
+    border-radius: 30px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1rem;
 }
 
 .hero .btn:hover {
-    background-color: var(--light-color);
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Steps section */
 .steps {
     text-align: center;
     background-color: var(--light-color);
+    background-image: linear-gradient(135deg, var(--light-color) 25%, rgba(223, 230, 208, 0.7) 25%, rgba(223, 230, 208, 0.7) 50%, var(--light-color) 50%, var(--light-color) 75%, rgba(223, 230, 208, 0.7) 75%, rgba(223, 230, 208, 0.7) 100%);
+    background-size: 40px 40px;
 }
 
 .steps h2 {
@@ -216,7 +251,7 @@ nav ul li a:hover {
     background-color: white;
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     width: 250px;
     height: 250px;
     display: flex;
@@ -224,11 +259,12 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     transition: var(--transition);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 .step-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .step-number {
@@ -270,13 +306,17 @@ nav ul li a:hover {
     content: "✓";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: bold;
 }
 
 /* Pricing section */
 .pricing {
     background-color: var(--light-color);
+    background-image: radial-gradient(var(--secondary-color) 10%, transparent 10%), 
+                      radial-gradient(var(--secondary-color) 10%, transparent 10%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
 }
 
 .pricing h2 {
@@ -309,7 +349,9 @@ nav ul li a:hover {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .pricing-table th, .pricing-table td {
@@ -319,7 +361,7 @@ nav ul li a:hover {
 }
 
 .pricing-table th {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
 }
 
@@ -359,8 +401,9 @@ nav ul li a:hover {
     background-color: white;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
+    border-top: 4px solid var(--primary-color);
 }
 
 .front-type:hover {
@@ -435,13 +478,15 @@ nav ul li a:hover {
 .example-item {
     border-radius: 5px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     transition: var(--transition);
+    border: 1px solid rgba(184, 196, 162, 0.3);
 }
 
 .example-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-color: var(--secondary-color);
 }
 
 .example-item img {
@@ -489,8 +534,20 @@ nav ul li a:hover {
     background-color: white;
     padding: 25px;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: var(--primary-color);
 }
 
 .contact-block h3 {
@@ -502,7 +559,8 @@ nav ul li a:hover {
     background-color: white;
     padding: 40px;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
 }
 
 .form-group {
@@ -523,11 +581,12 @@ nav ul li a:hover {
 }
 
 .file-upload {
-    border: 2px dashed #ddd;
+    border: 2px dashed var(--secondary-color);
     padding: 20px;
     text-align: center;
     border-radius: 4px;
     cursor: pointer;
+    background-color: #f5f8ee;
 }
 
 .file-upload input {
@@ -536,7 +595,7 @@ nav ul li a:hover {
 
 .file-upload label {
     cursor: pointer;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: 600;
 }
 
@@ -568,6 +627,10 @@ nav ul li a:hover {
     color: white;
     text-align: center;
     padding: 80px 0;
+    background-image: linear-gradient(rgba(125, 140, 101, 0.95), rgba(90, 107, 71, 0.95)), url('../img/kuchnia.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
 }
 
 .call-to-action h2 {
@@ -609,9 +672,10 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--accent-color);
+    background-color: var(--dark-color);
     color: white;
     padding: 60px 0 30px;
+    box-shadow: inset 0 15px 15px -15px rgba(0, 0, 0, 0.3);
 }
 
 .footer-columns {
@@ -648,7 +712,8 @@ footer {
 
 .footer-menu ul li a:hover {
     color: white;
-    text-decoration: underline;
+    text-decoration: none;
+    padding-left: 5px;
 }
 
 .footer-contact p {
@@ -791,7 +856,7 @@ footer {
     color: var(--light-text-color);
     text-align: center;
     padding: 60px 0;
-    background-image: linear-gradient(rgba(163, 166, 120, 0.9), rgba(163, 166, 120, 0.9)), url('../img/subpage-hero-bg.jpg');
+    background-image: linear-gradient(rgba(125, 140, 101, 0.9), rgba(90, 107, 71, 0.9)), url('../img/subpage-hero-bg.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1009,7 +1074,8 @@ footer {
     background-color: white;
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .testimonial-content {
@@ -1018,7 +1084,7 @@ footer {
 }
 
 .testimonial-content::before {
-    content: """;
+    content: "\201C";
     position: absolute;
     left: -10px;
     top: -20px;
