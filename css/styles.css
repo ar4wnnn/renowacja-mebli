@@ -398,8 +398,20 @@ nav ul li a:hover {
 }
 
 .calculation-steps p {
-    font-weight: normal;
-    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.calculation-image {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.calculation-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Examples section */
