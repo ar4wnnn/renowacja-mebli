@@ -112,7 +112,7 @@ section {
 }
 
 .btn-blink:hover {
-    animation: button-blink 2s infinite;
+    animation: button-blink 1s infinite;
 }
 
 @keyframes button-blink {
@@ -149,11 +149,14 @@ header {
     flex-wrap: wrap;
 }
 
-.logo h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0;
-    color: var(--dark-color);
-    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 60px;
+    width: auto;
 }
 
 nav ul {
