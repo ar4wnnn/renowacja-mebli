@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const fileInput = document.querySelector('.file-upload input[type="file"]');
         const fileLabel = document.querySelector('.file-upload label');
         const fileHint = document.querySelector('.file-hint');
+        const uploadKitchenBtn = document.getElementById('upload-kitchen-btn');
 
         if (fileInput && fileLabel && fileHint) {
             fileInput.addEventListener('change', function() {
@@ -22,6 +23,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     fileHint.textContent = 'Upload a file or drag and drop. jpg, jpeg, jpe, png, gif up to 10MB';
                     fileLabel.style.color = 'var(--primary-color)';
+                }
+            });
+        }
+
+        // Set up the upload kitchen button click handler
+        if (uploadKitchenBtn && fileInput) {
+            uploadKitchenBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Scroll to the file upload section
+                const fileUploadSection = document.getElementById('file-upload-section');
+                if (fileUploadSection) {
+                    fileUploadSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Wait for scrolling to complete then trigger the file input click
+                    setTimeout(() => {
+                        fileInput.click();
+                    }, 1000);
                 }
             });
         }

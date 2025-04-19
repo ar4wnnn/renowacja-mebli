@@ -159,7 +159,7 @@ nav ul li a:hover {
     color: var(--light-text-color);
     text-align: center;
     padding: 100px 0;
-    background-image: linear-gradient(rgba(163, 166, 120, 0.8), rgba(163, 166, 120, 0.8)), url('../img/hero-bg.jpg');
+    background-image: linear-gradient(rgba(163, 166, 120, 0.8), rgba(163, 166, 120, 0.8)), url('../img/kuchnia.png');
     background-size: cover;
     background-position: center;
 }
