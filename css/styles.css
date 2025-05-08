@@ -1013,10 +1013,10 @@ img[src="img/placeholder-before.png"] {
     color: #666;
     font-size: 24px;
     font-weight: bold;
-    width: 100%; /* Keep width 100% by default, JS might override */
-    /* height: 100%; REMOVED - Use JS inline style */
-    /* min-height: 200px; REMOVED - Use JS inline style or smaller default */
-    overflow: hidden; /* Prevent content spill */
+    /* width: 100%; */ /* JS overrides this */
+    /* height: 100%; */ /* JS overrides this */
+    overflow: hidden;
+    text-align: center; /* Added for explicit centering */
 }
 
 /* Style for background-image placeholders */
@@ -1273,19 +1273,26 @@ img[src="img/placeholder-before.png"] {
     border-radius: var(--border-radius);
     box-shadow: 0 6px 18px rgba(0,0,0,0.12); /* Enhanced shadow */
     cursor: pointer;
+    height: 280px; /* Set a fixed height for the container */
+    background-color: #f8f8f8; /* Light background for contain */
+    display: flex; /* Center image */
+    align-items: center;
+    justify-content: center;
 }
 
 .rodzaje-item img {
-    width: 100%;
-    height: 280px; /* Adjusted height */
-    object-fit: cover;
+    /* Remove fixed height from img */
+    /* height: 280px; */
+    width: 100%; /* Allow image to scale width */
+    max-height: 100%; /* Prevent image exceeding container height */
+    object-fit: contain; /* Fit without cropping */
     display: block;
-    transition: transform 0.4s ease, filter 0.4s ease; /* Added filter transition */
+    transition: transform 0.4s ease; /* Removed filter transition */
 }
 
 .rodzaje-item:hover img {
-    transform: scale(1.05); /* Slightly less scale */
-    filter: brightness(0.9); /* Slight darken on hover */
+    transform: scale(1.05); /* Keep scale effect */
+    /* filter: brightness(0.9); REMOVED */
 }
 
 .rodzaje-item .overlay {
@@ -1986,5 +1993,112 @@ h2 {
 }
 
 .process-steps li h4 .icon-left {
+    // ... existing code ...
+}
+
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 50px 0 20px; /* Adjusted padding */
+    box-shadow: inset 0 15px 15px -15px rgba(0, 0, 0, 0.3);
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 30px; /* Consistent gap */
+}
+
+.footer-menu, .footer-contact {
+    flex: 1; /* Allow growing */
+    min-width: 220px; /* Adjust min-width */
+}
+
+.footer-menu h3, .footer-contact h3 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.3rem; /* Slightly larger */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Subtle separator */
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-menu ul {
+    list-style: none;
+    padding: 0; /* Remove default padding */
+}
+
+.footer-menu ul li {
+    margin-bottom: 12px; /* Slightly more space */
+}
+
+.footer-menu ul li a {
+    color: var(--secondary-color); /* Lighter color for links */
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.footer-menu ul li a:hover {
+    color: white;
+    text-decoration: none;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    margin-bottom: 15px; /* More space between contact lines */
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+.footer-contact p strong {
+    color: var(--secondary-color); /* Highlight labels */
+}
+
+.footer-bottom {
+    padding-top: 25px; /* More padding */
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Slightly more visible border */
+    display: flex;
+    justify-content: center; /* Center align bottom text by default */
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    gap: 15px; /* Gap between elements if wrapped */
+    text-align: center; /* Ensure text is centered */
+    color: var(--secondary-color); /* Lighter text */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .top-bar .contact-info {
+        flex-direction: column;
+    }
+    
+    .contact-info-blocks {
+        flex-direction: column;
+    }
+    
+    .footer-columns {
+        flex-direction: column; /* Stack columns */
+        align-items: center; /* Center align columns */
+        text-align: center; /* Center text within columns */
+        gap: 40px; /* Adjust gap for stacked layout */
+    }
+    .footer-menu, .footer-contact {
+        width: 100%; /* Allow columns to take full width */
+        max-width: 400px; /* Optional: limit max width when stacked */
+        min-width: unset; /* Remove min-width */
+    }
+    .footer-menu ul {
+        padding-left: 0; /* Ensure no padding */
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
     // ... existing code ...
 } 
