@@ -406,7 +406,7 @@ nav ul li a:hover {
 .service-list p:before {
     content: "✓";
     position: absolute;
-    left: 0;
+    left: 8px; /* Provide space before checkmark */
     color: var(--accent-color);
     font-weight: bold;
 }
@@ -1730,7 +1730,13 @@ img[src="img/placeholder-before.png"] {
 
 /* Subpage styles */
 .subpage-hero {
-    // ... existing code ...
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(125, 140, 101, 0.85), rgba(90, 107, 71, 0.85)), url('../img/kuchnia.png');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Base paragraph style in main content areas */
@@ -1849,7 +1855,7 @@ img[src="img/placeholder-before.png"] {
     /* font-family: "Font Awesome 6 Free"; */
     /* font-weight: 900; */
     position: absolute;
-    left: 0;
+    left: 8px; /* Provide space before checkmark */
     top: 50%; /* Align vertically to the center */
     transform: translateY(-50%); /* Adjust for exact centering */
     /* color: var(--primary-color); */
@@ -1960,5 +1966,86 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    // ... existing code ...
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto; /* Center wrapper */
+    /* Make wrapper a flex container to center its direct children */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+/* Allow direct children like h2/p to take width but respect centering */
+.content-wrapper > h2,
+.content-wrapper > p {
+     width: 100%; /* Span the centered wrapper */
+     max-width: 900px; /* Optional: constrain text width slightly less than wrapper */
+     /* text-align should be handled by h2 rule (center) or p rule/inline style */
+}
+/* Ensure paragraphs default to left unless centered inline */
+.content-wrapper > p:not([style*='text-align: center']) {
+    text-align: left;
+}
+
+
+.image-text-box {
+    display: flex;
+    /* margin: 40px auto; Keep vertical margin, horizontal auto is handled by parent now */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    /* max-width: 1000px; /* Inherits constraint from parent */
+    width: 100%; /* Take full width of centered parent */
+    justify-content: center; /* Center items if they wrap */
+}
+
+.image-text-box .image-wrapper {
+    flex: 1 1 40%;
+    min-width: 300px;
+    text-align: center; /* Center content (like the img) */
+}
+
+.image-text-box .image-wrapper img {
+    width: 100%; /* Scale image width */
+    max-width: 450px; /* Prevent image getting too large */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: block; /* Make block for margin auto */
+    margin-left: auto; /* Center the image block */
+    margin-right: auto; /* Center the image block */
+}
+
+.image-text-box .text-wrapper {
+    flex: 1 1 55%;
+    min-width: 300px;
+    text-align: left; /* Keep text left-aligned */
 } 
