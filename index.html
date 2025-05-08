@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renowacja Mebli Kuchennych</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -37,7 +40,15 @@
     </header>
 
     <section class="hero">
-        <div class="container">
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+                <img src="img/kuchnia_before.png" alt="Kuchnia przed renowacją">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/kuchnia.png" alt="Kuchnia po renowacji">
+            </div>
+        </div>
+        <div class="hero-content container">
             <h2>Warszawa i okolice</h2>
             <h1>Odnowa i wymiana frontów meblowych oraz renowacja mebli</h1>
             <a href="#file-upload-section" class="btn" id="upload-kitchen-btn">WYŚLIJ ZDJĘCIE SWOJEJ KUCHNI</a>
@@ -274,20 +285,55 @@
 
     <section class="examples">
         <div class="container">
-            <h2>przykładowe realizacje</h2>
+            <h2>Przykładowe Realizacje</h2>
+            <p class="section-subtitle">Zobacz efekty naszej pracy i zainspiruj się!</p>
             <div class="examples-gallery">
                 <div class="example-item">
-                    <img src="img/example-1.jpg" alt="Przykładowa realizacja 1">
+                    <div class="example-image-pair">
+                        <div class="example-image-before">
+                            <img src="img/kuchnia_before.png" alt="Kuchnia - Przed renowacją">
+                            <span>Przed</span>
+                        </div>
+                        <div class="example-image-after">
+                            <img src="img/kuchnia.png" alt="Kuchnia - Po renowacji">
+                            <span>Po</span>
+                        </div>
+                    </div>
+                    <h4>Transformacja Kuchni - Warszawa</h4>
+                    <p>Pełna renowacja frontów kuchennych, zmiana koloru i wymiana uchwytów.</p>
                 </div>
                 <div class="example-item">
-                    <img src="img/example-2.jpg" alt="Przykładowa realizacja 2">
+                    <div class="example-image-pair">
+                        <div class="example-image-before">
+                            <img src="img/placeholder-before.png" alt="Projekt 2 - Przed">
+                            <span>Przed</span>
+                        </div>
+                        <div class="example-image-after">
+                            <img src="img/example-2.jpg" alt="Projekt 2 - Po">
+                            <span>Po</span>
+                        </div>
+                    </div>
+                    <h4>Odnowione Szafki - Mokotów</h4>
+                    <p>Lakierowanie frontów szafek łazienkowych na wysoki połysk.</p>
                 </div>
                 <div class="example-item">
-                    <img src="img/example-3.jpg" alt="Przykładowa realizacja 3">
+                    <div class="example-image-pair">
+                        <div class="example-image-before">
+                            <img src="img/placeholder-before.png" alt="Projekt 3 - Przed">
+                            <span>Przed</span>
+                        </div>
+                        <div class="example-image-after">
+                            <img src="img/example-3.jpg" alt="Projekt 3 - Po">
+                            <span>Po</span>
+                        </div>
+                    </div>
+                    <h4>Nowe Życie Starych Mebli - Ursynów</h4>
+                    <p>Renowacja zabytkowej komody, przywrócenie oryginalnego wyglądu.</p>
                 </div>
-                <div class="example-item">
-                    <img src="img/example-4.jpg" alt="Przykładowa realizacja 4">
-                </div>
+                <!-- Add more items as needed -->
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#contact" class="btn">Poproś o Wycenę Twojej Realizacji</a>
             </div>
         </div>
     </section>
@@ -402,5 +448,6 @@
     <script src="js/placeholder-images.js"></script>
     <script src="js/front-calculator.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/hero-carousel.js"></script>
 </body>
 </html> 

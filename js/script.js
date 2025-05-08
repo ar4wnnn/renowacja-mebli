@@ -124,7 +124,43 @@ document.addEventListener('DOMContentLoaded', function() {
     setupFormValidation();
     setupSmoothScroll();
     setupGallery();
+    setupFrontOrderButtons();
 });
+
+// Function to handle .order-btn clicks
+function setupFrontOrderButtons() {
+    const orderButtons = document.querySelectorAll('.front-type .order-btn');
+    const targetSection = document.getElementById('file-upload-section');
+
+    if (orderButtons.length > 0 && targetSection) {
+        orderButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); // Prevent any default button action
+                // const frontTypeElement = button.closest('.front-type');
+                // const frontTypeName = frontTypeElement ? frontTypeElement.querySelector('h4').textContent : 'front';
+                // console.log(`Order button clicked for: ${frontTypeName}`); // For debugging
+                
+                targetSection.scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Optional: Highlight the section or a specific input field after scroll
+                // For example, focus on the first input of the form in that section
+                const firstInput = targetSection.querySelector('input, textarea');
+                if (firstInput) {
+                    // Add a small delay to ensure scroll is complete before focusing
+                    // and to visually indicate the target area.
+                    setTimeout(() => {
+                        firstInput.focus({ preventScroll: true });
+                        // Maybe add a temporary highlight effect via CSS class
+                        targetSection.classList.add('highlight-section');
+                        setTimeout(() => targetSection.classList.remove('highlight-section'), 2000);
+                    }, 700); // Adjust delay as needed for smooth scroll to finish
+                }
+            });
+        });
+    }
+}
 
 // Add some simple animations on scroll
 window.addEventListener('scroll', function() {

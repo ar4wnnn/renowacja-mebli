@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odnowa i wymiana frontów - Renowacja Mebli Kuchennych</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -36,10 +39,19 @@
         </div>
     </header>
 
-    <section class="subpage-hero">
-        <div class="container">
-            <h1>Odnowa i wymiana frontów</h1>
-            <p>Profesjonalne rozwiązania dla Twojej kuchni</p>
+    <section class="hero">
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+                <img src="img/kuchnia_before.png" alt="Kuchnia przed renowacją">
+            </div>
+            <div class="carousel-slide">
+                <img src="img/kuchnia.png" alt="Kuchnia po renowacji">
+            </div>
+        </div>
+        <div class="hero-content container">
+            <h2>Warszawa i okolice</h2>
+            <h1>Odnowa i wymiana frontów meblowych oraz renowacja mebli</h1>
+            <a href="#file-upload-section" class="btn" id="upload-kitchen-btn">WYŚLIJ ZDJĘCIE SWOJEJ KUCHNI</a>
         </div>
     </section>
 
@@ -55,7 +67,7 @@
                     </div>
                     <div class="text-wrapper">
                         <h3>Co zyskujesz?</h3>
-                        <ul>
+                        <ul class="benefits-list">
                             <li>Oszczędność pieniędzy w porównaniu z zakupem nowych mebli</li>
                             <li>Odświeżony, nowoczesny wygląd mebli</li>
                             <li>Szybszą realizację - tylko 14-20 dni</li>
@@ -68,19 +80,19 @@
                 <h2>Na czym polega proces odnowy frontów?</h2>
                 <ol class="process-steps">
                     <li>
-                        <h4>Przygotowanie</h4>
+                        <h4><i class="fas fa-tools icon-left"></i>Przygotowanie</h4>
                         <p>Najpierw demontujemy stare fronty - możesz to zrobić samodzielnie lub skorzystać z usług naszego montażysty. Fronty trafiają do naszej pracowni, gdzie są dokładnie mierzone i przygotowywane do renowacji.</p>
                     </li>
                     <li>
-                        <h4>Obróbka</h4>
+                        <h4><i class="fas fa-hand-sparkles icon-left"></i>Obróbka</h4>
                         <p>Powierzchnia jest dokładnie czyszczona i szlifowana, a wszelkie ubytki są naprawiane. W przypadku frontów z folią, która się odkleją, powierzchnia jest odpowiednio przygotowywana.</p>
                     </li>
                     <li>
-                        <h4>Malowanie</h4>
+                        <h4><i class="fas fa-palette icon-left"></i>Malowanie</h4>
                         <p>Następnie nakładamy warstwę podkładową, a po jej wyschnięciu aplikujemy wybrany kolor w określonym wykończeniu (mat, półmat lub połysk). Używamy wysokiej jakości lakierów, które zapewniają trwałość i odporność na uszkodzenia.</p>
                     </li>
                     <li>
-                        <h4>Montaż</h4>
+                        <h4><i class="fas fa-screwdriver-wrench icon-left"></i>Montaż</h4>
                         <p>Po całkowitym wyschnięciu i utwardzeniu lakieru, fronty są ponownie montowane na miejscu. Dodatkowo wymieniamy wszystkie uszkodzone zawiasy i mechanizmy, aby zapewnić idealne funkcjonowanie mebli.</p>
                     </li>
                 </ol>
@@ -105,6 +117,7 @@
                             <li>Fronty drewniane</li>
                         </ul>
                         <p>Wszystkie nasze fronty mogą być wykonane w dowolnym kolorze z palety RAL lub NCS. Oferujemy również różne systemy otwierania: standardowe uchwyty, system tip-on lub fronty z uchwytami frezowanymi.</p>
+                        <a href="rodzaje-frontow.html" class="btn btn-secondary" style="margin-top: 15px; margin-bottom: 10px;">Zobacz Nasze Rodzaje Frontów</a>
                     </div>
                     <div class="image-wrapper">
                         <img src="img/wymiana-frontow-1.jpg" alt="Rodzaje frontów meblowych">
@@ -115,19 +128,24 @@
                 <p>Aby poznać szczegółowy cennik usług, sprawdź naszą <a href="index.html#pricing">tabelę cenową</a> lub skontaktuj się z nami telefonicznie.</p>
                 
                 <div class="gallery-section">
-                    <h2>Przykładowe realizacje</h2>
+                    <h2>Zobacz nasze transformacje</h2>
+                    <p class="section-subtitle">Przykłady odnowionych i wymienionych frontów kuchennych oraz meblowych.</p>
                     <div class="gallery-grid">
                         <div class="gallery-item">
                             <img src="img/realizacja-1.jpg" alt="Realizacja odnowy frontów 1">
+                            <p class="gallery-caption">Kuchnia Dębowa – Nowoczesny Mat</p>
                         </div>
                         <div class="gallery-item">
                             <img src="img/realizacja-2.jpg" alt="Realizacja odnowy frontów 2">
+                            <p class="gallery-caption">Fronty Lakierowane – Wysoki Połysk Biel</p>
                         </div>
                         <div class="gallery-item">
                             <img src="img/realizacja-3.jpg" alt="Realizacja odnowy frontów 3">
+                            <p class="gallery-caption">Szafki Łazienkowe – Odnowa i Zmiana Koloru</p>
                         </div>
                         <div class="gallery-item">
                             <img src="img/realizacja-4.jpg" alt="Realizacja odnowy frontów 4">
+                            <p class="gallery-caption">Metamorfoza Starych Mebli – Styl Klasyczny</p>
                         </div>
                     </div>
                 </div>
@@ -175,5 +193,6 @@
 
     <script src="js/placeholder-images.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/hero-carousel.js"></script>
 </body>
 </html> 
