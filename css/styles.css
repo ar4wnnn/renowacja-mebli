@@ -1998,14 +1998,17 @@ footer {
     /* Make wrapper a flex container to center its direct children */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: stretch; /* Allow items to fill width */
 }
 
-/* Allow direct children like h2/p to take width but respect centering */
+/* Allow direct children like h2/p/div to take width but respect centering of the wrapper */
 .content-wrapper > h2,
-.content-wrapper > p {
+.content-wrapper > p,
+.content-wrapper > .front-type-showcase,
+.content-wrapper > .rodzaje-gallery-heading,
+.content-wrapper > .rodzaje-gallery {
      width: 100%; /* Span the centered wrapper */
-     max-width: 900px; /* Optional: constrain text width slightly less than wrapper */
+     /* max-width: 900px; /* Optional: constrain text width slightly less than wrapper, remove if sections should be full width */
      /* text-align should be handled by h2 rule (center) or p rule/inline style */
 }
 /* Ensure paragraphs default to left unless centered inline */
@@ -2013,6 +2016,10 @@ footer {
     text-align: left;
 }
 
+.content-wrapper > .front-type-showcase h2,
+.content-wrapper > .rodzaje-gallery-heading {
+    text-align: center; /* Keep these headings centered */
+}
 
 .image-text-box {
     display: flex;
