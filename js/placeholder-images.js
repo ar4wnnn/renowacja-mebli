@@ -6,14 +6,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('img');
     images.forEach(function(img) {
         // Skip logo.png - keep the first logo on each page
-        // Check if the image is inside the hero carousel
-        if ((img.src.includes('logo.png') && imageCounter === 1) || img.closest('.hero-carousel')) {
-            // If it's the first logo OR inside the hero carousel, skip it
-            // We might still increment the counter for the logo if needed elsewhere, but not for carousel
-            if (img.src.includes('logo.png')) {
-                 imageCounter++; // Increment only for the logo if necessary
+        // Check if the image is inside the hero carousel OR .rodzaje-gallery
+        if (
+            (img.src.includes('logo.png') && imageCounter === 1) || 
+            img.closest('.hero-carousel') ||
+            img.closest('.rodzaje-gallery')
+        ) {
+            // If it's the first logo OR inside the hero carousel OR .rodzaje-gallery, skip it
+            // Increment counter only for the logo if it's not part of other excluded sections, to maintain unique placeholder numbers for other images.
+            if (img.src.includes('logo.png') && !img.closest('.hero-carousel') && !img.closest('.rodzaje-gallery')) {
+                 imageCounter++; 
             }
-            return; // Skip replacement for logo and carousel images
+            return; // Skip replacement for logo, carousel images, and .rodzaje-gallery images
         }
         
         // Get original dimensions BEFORE replacing
@@ -30,12 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
             placeholder.style.height = `${originalHeight}px`;
         } else {
             // Fallback if dimensions aren't available (e.g., image not loaded yet)
-            // You might still need some default CSS size in this case
-            placeholder.style.width = '100%'; // Or a default width
-            placeholder.style.minHeight = '150px'; // Smaller default min-height
+            placeholder.style.width = '100%'; 
+            placeholder.style.minHeight = '150px'; 
         }
 
-        // Get parent and replace the image with placeholder
         const parent = img.parentNode;
         parent.replaceChild(placeholder, img);
         

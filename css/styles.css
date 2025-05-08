@@ -949,9 +949,9 @@ img[src="img/placeholder-before.png"] {
     background-color: white;
     margin-bottom: 0;
     font-size: 0.9rem;
-    text-align: center;
-}
-
+        text-align: center;
+    }
+    
 /* Added style for more descriptive gallery captions */
 .gallery-item p.gallery-caption {
     background-color: rgba(var(--dark-color-rgb, 74, 88, 56), 0.85); /* Using dark color with alpha, define --dark-color-rgb or use static */
@@ -962,7 +962,7 @@ img[src="img/placeholder-before.png"] {
     position: absolute; /* Position it over the image */
     bottom: 0;
     left: 0;
-    width: 100%;
+        width: 100%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1058,9 +1058,10 @@ img[src="img/placeholder-before.png"] {
 }
 
 .service-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: var(--text-color);
+    margin-bottom: 0.75rem; /* Space within card */
 }
 
 /* Styling for Testimonials section */
@@ -1150,14 +1151,14 @@ img[src="img/placeholder-before.png"] {
 }
 
 .blaty-item h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: var(--primary-color);
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .blaty-item p {
-    font-size: 0.9rem;
-    line-height: 1.6;
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: var(--text-color);
 }
 
@@ -1209,15 +1210,15 @@ img[src="img/placeholder-before.png"] {
 }
 
 .showcase-desc h3 {
-    font-size: 1.6rem; /* Increased size */
+    font-size: 1.5rem;
     color: var(--primary-color);
-    margin-bottom: 18px; /* Increased margin */
+    margin-bottom: 1rem;
 }
 
 .showcase-desc p {
-    margin-bottom: 20px;
+    margin-bottom: 1.5rem;
     line-height: 1.7;
-    font-size: 0.95rem; /* Slightly larger paragraph text */
+    font-size: 1rem;
 }
 
 /* Styling for ul.features within .showcase-desc */
@@ -1363,15 +1364,15 @@ img[src="img/placeholder-before.png"] {
 }
 
 .contact-detail .content h3 {
-    font-size: 1.25rem; /* Slightly larger */
+    font-size: 1.3rem;
     color: var(--dark-color);
-    margin-bottom: 8px; /* More space */
+    margin-bottom: 0.75rem;
 }
 
 .contact-detail .content p {
     margin-bottom: 5px;
-    line-height: 1.6;
-    font-size: 0.95rem; /* Slightly larger */
+    line-height: 1.7;
+    font-size: 0.95rem;
 }
 .contact-detail .content p a {
     color: var(--primary-color);
@@ -1550,15 +1551,15 @@ img[src="img/placeholder-before.png"] {
 }
 
 .faq-item h3 {
-    font-size: 1.25rem; /* Larger */
+    font-size: 1.25rem;
     color: var(--dark-color);
-    padding: 20px 25px; /* More padding */
+    padding: 20px 25px;
     margin: 0;
     cursor: pointer; 
     background-color: var(--light-color);
     border-bottom: 1px solid var(--secondary-color);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    position: relative; 
+    position: relative;
     transition: background-color 0.3s ease;
 }
 .faq-item h3:hover {
@@ -1584,13 +1585,12 @@ img[src="img/placeholder-before.png"] {
 
 
 .faq-item p {
-    padding: 25px; /* More padding */
-    line-height: 1.75; /* More line height */
+    padding: 25px;
+    line-height: 1.75;
     margin: 0;
     font-size: 0.95rem;
-    background-color: #fff; /* Ensure p has white background */
+    background-color: #fff;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
-    /* display: none; */ 
 }
 
 /*
@@ -1645,3 +1645,346 @@ img[src="img/placeholder-before.png"] {
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(var(--dark-color-rgb), 0.3);
 }
+
+.content-wrapper p {
+    font-size: 1rem; /* Base size for main paragraphs */
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.image-text-box .text-wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.image-text-box .text-wrapper p,
+.showcase-desc p,
+.process-steps li p,
+.blaty-item p,
+.directions p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.showcase-desc h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card h3,
+.contact-detail .content h3 {
+    font-size: 1.3rem;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+}
+
+.blaty-item h3 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    padding: 20px 25px;
+    margin: 0;
+    cursor: pointer; 
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative; 
+    transition: background-color 0.3s ease;
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+}
+
+.faq-item p {
+    padding: 25px;
+    line-height: 1.75;
+    margin: 0;
+    font-size: 0.95rem;
+    background-color: #fff;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.contact-detail .content p {
+    margin-bottom: 0.5rem; /* Less margin for tighter contact details */
+}
+
+/* Subpage styles */
+.subpage-hero {
+    // ... existing code ...
+}
+
+/* Base paragraph style in main content areas */
+.content-wrapper p {
+    font-size: 1rem; /* Base size for main paragraphs */
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Sub-headings (like in image-text boxes, showcase descriptions) */
+.image-text-box .text-wrapper h3,
+.showcase-desc h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs within specific components (slightly smaller than base) */
+.image-text-box .text-wrapper p, /* Paragraphs directly in text-wrapper if not lists */
+.showcase-desc p,
+.process-steps li p,
+.blaty-item p,
+.directions p,
+.service-card p,
+.contact-detail .content p,
+.testimonial-quote, /* Assuming this is paragraph-like */
+.faq-item p {
+    font-size: 0.95rem;
+    line-height: 1.7; /* Consistent line height */
+    margin-bottom: 1rem; /* Consistent bottom margin */
+}
+/* Special case for FAQ line height if desired */
+.faq-item p {
+    line-height: 1.75; /* Slightly more for FAQ answers */
+}
+.contact-detail .content p {
+    margin-bottom: 0.5rem; /* Less margin for tighter contact details */
+}
+
+
+/* Card/Item titles (h3) */
+.service-card h3,
+.blaty-item h3,
+.contact-detail .content h3,
+.spec-item h3, /* For .tech-specs on rodzaje-frontow */
+.testimonial-author strong /* Assuming author name is in strong tag */ {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+.service-card h3, .contact-detail .content h3, .spec-item h3 { /* These often use dark-color */
+    color: var(--dark-color);
+}
+.blaty-item h3, .testimonial-author strong { /* These often use primary/accent */
+     color: var(--primary-color);
+}
+
+
+/* FAQ Question (h3) - specific styling */
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    padding: 20px 25px;
+    margin: 0;
+    cursor: pointer;
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.process-steps li h4 .icon-left {
+    // ... existing code ...
+}
+
+/* === Consolidated Subpage Text Styles START === */
+/* Base paragraph style in main content areas */
+.content-wrapper p { /* This rule might already exist and be okay, verify and adjust if needed */
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Common Sub-headings (h3) */
+.image-text-box .text-wrapper h3,
+.showcase-desc h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Common Paragraphs within specific components */
+.image-text-box .text-wrapper p,
+.showcase-desc p,
+.process-steps li p,
+.blaty-item p,
+.directions p,
+.service-card p,
+.contact-detail .content p, /* Base style, can be overridden for tighter spacing */
+.testimonial-quote,
+.faq-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* Fine-tuning specific paragraphs */
+.faq-item p {
+    line-height: 1.75; /* Slightly more for FAQ answers */
+}
+.contact-detail .content p {
+    margin-bottom: 0.5rem; /* Less margin for tighter contact details */
+}
+
+/* Common Card/Item titles (h3) */
+.service-card h3,
+.blaty-item h3,
+.contact-detail .content h3,
+.spec-item h3 { /* For .tech-specs on rodzaje-frontow */
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+.service-card h3, .contact-detail .content h3, .spec-item h3 {
+    color: var(--dark-color);
+}
+.blaty-item h3 { /* .testimonial-author strong removed for now, handled separately if needed */
+     color: var(--primary-color);
+}
+
+/* FAQ Question (h3) - specific styling (ensure it's not conflicting) */
+.faq-item h3 { /* This rule is specific and likely okay, verify */
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    padding: 20px 25px;
+    margin: 0;
+    cursor: pointer;
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+/* === Consolidated Subpage Text Styles END === */
+
+h2 {
+    // ... existing code ...
+}
+
+/* Attempt to remove some older, specific conflicting rules. This part of the edit might be tricky. */
+
+/* Removing .showcase-desc p (original was around line 1218) */
+/* .showcase-desc p {
+    margin-bottom: 1.5rem; 
+    line-height: 1.7;
+    font-size: 1rem;
+} REMOVED */
+
+/* Removing .service-card p (original was around line 1060 and again near 1703) */
+/* .service-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    margin-bottom: 0.75rem; 
+} REMOVED */
+
+/* Removing .blaty-item p (original was around line 1159 and again with .process-steps li p) */
+/* .blaty-item p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-color);
+} REMOVED */
+
+/* Removing .image-text-box .text-wrapper h3 (original was around line 1172 and again near 1655) */
+/* .image-text-box .text-wrapper h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+    color: var(--primary-color);
+} REMOVED */
+
+/* Removing .showcase-desc h3 (original was around line 1212 and again near 1671) */
+/* .showcase-desc h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem; 
+} REMOVED */
+
+// ... existing code ...
+
+/* Subpage styles */
+.subpage-hero {
+    // ... existing code ...
+}
+
+/* Base paragraph style in main content areas */
+.content-wrapper p {
+    font-size: 1rem; /* Base size for main paragraphs */
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Sub-headings (like in image-text boxes, showcase descriptions) */
+.image-text-box .text-wrapper h3,
+.showcase-desc h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs within specific components (slightly smaller than base) */
+.image-text-box .text-wrapper p, /* Paragraphs directly in text-wrapper if not lists */
+.showcase-desc p,
+.process-steps li p,
+.blaty-item p,
+.directions p,
+.service-card p,
+.contact-detail .content p,
+.testimonial-quote, /* Assuming this is paragraph-like */
+.faq-item p {
+    font-size: 0.95rem;
+    line-height: 1.7; /* Consistent line height */
+    margin-bottom: 1rem; /* Consistent bottom margin */
+}
+/* Special case for FAQ line height if desired */
+.faq-item p {
+    line-height: 1.75; /* Slightly more for FAQ answers */
+}
+.contact-detail .content p {
+    margin-bottom: 0.5rem; /* Less margin for tighter contact details */
+}
+
+
+/* Card/Item titles (h3) */
+.service-card h3,
+.blaty-item h3,
+.contact-detail .content h3,
+.spec-item h3, /* For .tech-specs on rodzaje-frontow */
+.testimonial-author strong /* Assuming author name is in strong tag */ {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+.service-card h3, .contact-detail .content h3, .spec-item h3 { /* These often use dark-color */
+    color: var(--dark-color);
+}
+.blaty-item h3, .testimonial-author strong { /* These often use primary/accent */
+     color: var(--primary-color);
+}
+
+
+/* FAQ Question (h3) - specific styling */
+.faq-item h3 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    padding: 20px 25px;
+    margin: 0;
+    cursor: pointer;
+    background-color: var(--light-color);
+    border-bottom: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.process-steps li h4 .icon-left {
+    // ... existing code ...
+} 
