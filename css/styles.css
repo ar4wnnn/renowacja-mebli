@@ -2065,4 +2065,20 @@ footer {
     flex: 1 1 55%;
     min-width: 300px;
     text-align: left; /* Keep text left-aligned */
+}
+
+/* --- Custom spacing and bullet list for Materials section on Meble na Wymiar page --- */
+.materials-heading {
+    margin-top: 60px; /* Add space above the heading */
+}
+
+.materials-list {
+    list-style-type: disc !important; /* Restore bullet points */
+    padding-left: 25px !important;   /* Standard left padding for bullets */
+    margin-top: 1rem;
+}
+
+.materials-list li {
+    position: static; /* Reset any relative positioning from generic list styles */
+    padding-left: 0 !important; /* Remove extra left padding */
 } 
