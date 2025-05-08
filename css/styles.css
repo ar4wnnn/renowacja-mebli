@@ -1808,6 +1808,17 @@ img[src="img/placeholder-before.png"] {
     transition: background-color 0.3s ease;
 }
 
+.process-steps {
+    list-style-type: none; /* Remove default bullets for UL */
+    padding-left: 0; /* Remove default UL padding */
+}
+
+.process-steps li h4 {
+    display: flex; /* Align icon and text */
+    align-items: center;
+    /* margin-bottom: 0.5rem; /* Adjust as needed, or keep from h4 global */
+}
+
 .process-steps li h4 .icon-left {
     margin-right: 12px; /* Slightly more space */
     color: var(--primary-color);
@@ -1820,9 +1831,8 @@ img[src="img/placeholder-before.png"] {
 /* Adjust li padding if icon is larger */
 .process-steps li {
     position: relative;
-    padding-left: 90px; /* Increased padding-left */
+    padding-left: 0; /* Remove padding previously for numbers */
     margin-bottom: 40px;
-    counter-increment: step;
 }
 
 /* Utility class for centering text */
